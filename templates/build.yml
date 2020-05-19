@@ -1,9 +1,9 @@
 parameters:
-  buildConfiguration: 'Release'
+  buildConfiguration: ''
 
 steps:
 - task: DotNetCoreCLI@2
-  displayName: 'Build the project - Deepa1'
+  displayName: 'Build the project - ${{ parameters.buildConfiguration }}'
   inputs:
     command: 'build'
     arguments: '--no-restore --configuration ${{ parameters.buildConfiguration }}'
